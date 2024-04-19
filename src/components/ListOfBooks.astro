@@ -8,7 +8,12 @@ import { books } from "../data/books";
     books.map((book) => {
       return (
         <li>
-          <BookItem id={book.id} title={book.title} img={book.img} />
+          <BookItem
+            transition:name={`book ${book.id} box`}
+            id={book.id}
+            title={book.title}
+            img={book.img}
+          />
         </li>
       );
     })
