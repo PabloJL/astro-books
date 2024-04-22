@@ -1,6 +1,7 @@
 ---
 import BookItem from "./BookItem.astro";
 import { books } from "../data/books";
+
 ---
 
 <ul class="grid grid-cols-2 md:grid-cols-3 gap-3 px-4">
@@ -9,7 +10,8 @@ import { books } from "../data/books";
       return (
         <li>
           <BookItem
-            transition:name={`book ${book.id} box`}
+            transition:name={`book ${book.id} box`}}
+            
             id={book.id}
             title={book.title}
             img={book.img}

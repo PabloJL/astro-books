@@ -1,0 +1,135 @@
+---
+import { slide } from "astro:transitions";
+interface Props {
+  id: string;
+  title: string;
+  opinion: string;
+  img: string;
+  author: string;
+  pages: string;
+}
+
+const { id, title, opinion, img, author, pages } = Astro.props;
+---
+
+<header class="relative">
+  <a
+    href="/"
+    type="button"
+    class="fixed left-2 top-2 text-white bg-black dark:bg-white dark:text-black dark:hover:bg-gray-300 hover:bg-blue-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-black dark:hover:bg-blue-950 dark:focus:ring-blue-800"
+  >
+    <svg
+      class="w-4 h-4 rotate-180"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 14 10"
+    >
+      <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+    </svg>
+    <span class="sr-only">Icon description</span>
+  </a>
+
+  <h1
+    class="scale-50 font-black uppercase text-6xl md:text-8xl text-center py-8 px-4 dark:text-white"
+    transition:name="title"
+  >
+    Latest
+    <span class="block text-[36px] md:text-[58px]">Books</span>
+  </h1>
+</header>
+<div class="grid grid-cols-[350px_1fr] gap-x-12 mt-20">
+  <div class="flex flex-col">
+    <picture class="mb-8 w-full relative">
+      <img
+        transition:name={`book ${id} box`}
+        transition:animate={slide({ duration: "0.2s" })}
+        class="aspect-[389/500] h-full object-cover w-full max-w-full rounded-lg"
+        src={img}
+        alt={`Cover of book ${title}`}
+      />
+    </picture>
+    <div class="flex flex-col gap-2">
+      <a
+        href="#"
+        type="button"
+        class="text-white justify-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        <svg
+          class="w-3.5 h-3.5 me-2"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 18 21"
+        >
+          <path
+            d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z"
+          ></path>
+        </svg>
+        Buy now
+      </a>
+      <button
+        type="button"
+        class="text-white justify-center bg-green-600 hover:bg-green-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center me-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+      >
+        <svg
+          class="w-4 h-4 me-2"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor"
+          viewBox="0 0 18 21"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M5 12h14m-7 7V5"></path>
+        </svg>
+        Add to List
+      </button>
+    </div>
+  </div>
+  <aside>
+    <h1 class="text-5xl font-black mb-4 dark:text-white">{title}</h1>
+    <p class="text-lg mb-4 dark:text-white">
+      {opinion}
+    </p>
+    <p>
+      <strong class="dark:text-white">Author: </strong>
+      <span class="font-semibold text-gray-800 dark:text-slate-200">
+        {author}
+      </span>
+    </p>
+    <p class="mb-5">
+      <strong class="dark:text-white">Pages: </strong>
+      <span class="font-semibold text-gray-500 dark:text-slate-100">
+        {pages}
+      </span>
+    </p>
+    <!-- Rating -->
+    <div class="flex items-center mb-5">
+      <p
+        class="bg-blue-100 text-blue-800 text-sm font-semibold inline-flex items-center p-1.5 rounded dark:bg-blue-200 dark:text-blue-800"
+      >
+        8.7
+      </p>
+      <p class="ms-2 font-medium text-gray-900 dark:text-white">Excellent</p>
+      <span class="w-1 h-1 mx-2 bg-gray-900 rounded-full dark:bg-gray-500"
+      ></span>
+      <p class="text-sm font-medium text-gray-500 dark:text-gray-400">
+        376 reviews
+      </p>
+      <a
+        href="#"
+        class="ms-auto text-sm font-medium text-blue-600 hover:underline dark:text-blue-500"
+        >Read all reviews</a
+      >
+    </div>
+  </aside>
+</div>
