@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import BookSection from "../components/BookSection.astro";
+import CommentsSection from "../components/Comments/CommentsSection.astro";
 import { slide } from "astro:transitions";
 import { books } from "../data/books";
 const { book } = Astro.params;
@@ -14,7 +15,7 @@ const { id, title, opinion, img, author, pages } = info;
 ---
 
 <Layout title=`Libro ${title}`>
-  <main class="m-auto max-w-4xl">
+  <main class="m-auto max-w-4xl flex flex-col">
     <BookSection
       id={id}
       title={title}
@@ -23,5 +24,6 @@ const { id, title, opinion, img, author, pages } = info;
       author={author}
       pages={pages}
     />
+    <CommentsSection />
   </main>
 </Layout>
