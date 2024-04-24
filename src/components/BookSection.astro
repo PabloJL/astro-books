@@ -16,7 +16,7 @@ const { id, title, opinion, img, author, pages } = Astro.props;
   <a
     href="/"
     type="button"
-    class="fixed z-10 left-2 top-2 text-white bg-black dark:bg-white dark:text-black dark:hover:bg-gray-300 hover:bg-blue-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-black dark:hover:bg-blue-950 dark:focus:ring-blue-800"
+    class="fixed z-10 left-24 top-5 text-white bg-black dark:bg-white dark:text-black dark:hover:bg-gray-300 hover:bg-blue-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-black dark:hover:bg-blue-950 dark:focus:ring-blue-800"
   >
     <svg
       class="w-4 h-4 rotate-180"
@@ -35,13 +35,15 @@ const { id, title, opinion, img, author, pages } = Astro.props;
     <span class="sr-only">Icon description</span>
   </a>
 
-  <h1
-    class="scale-50 font-black uppercase text-6xl md:text-8xl text-center py-8 px-4 dark:text-white"
-    transition:name="title"
-  >
-    Latest
-    <span class="block text-[36px] md:text-[58px]">Books</span>
-  </h1>
+  <a href="/">
+    <h1
+      class="scale-50 font-black uppercase text-6xl md:text-8xl text-center py-8 px-4 dark:text-white"
+      transition:name="title"
+    >
+      Latest
+      <span class="block text-[36px] md:text-[58px]">Books</span>
+    </h1>
+  </a>
 </header>
 <div
   class="md:grid md:grid-cols-[350px_1fr] gap-x-12 mt-3 md:mt-20 flex flex-col-reverse content-center"
