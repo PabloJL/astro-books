@@ -50,7 +50,7 @@ export const AddComment = () => {
         >
           <div className="relative p-4 w-full max-w-md">
             <div className="bg-white rounded-lg shadow dark:bg-zinc-900">
-              <div className="flex items-center justify-between p-4 border-b rounded-t">
+              <div className="flex items-center justify-between p-4  rounded-t">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
                   Write your opinion
                 </h3>
