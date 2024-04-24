@@ -3,8 +3,10 @@ import Comments from "./Comments.astro";
 import { AddComment } from "./AddComment.jsx";
 ---
 
-<section id="comments" class="mt-32">
-  <h1 class="dark:text-white text-3xl block py-4 font-black">REVIEWS</h1>
-  <AddComment client:visible />
+<section id="comments" class="mt-32 p-2">
+  <div class="flex justify-between mb-20">
+    <h1 class="dark:text-white text-3xl block py-4 font-black">REVIEWS</h1>
+    <AddComment client:visible />
+  </div>
   <Comments />
 </section>
