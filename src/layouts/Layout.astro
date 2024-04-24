@@ -1,6 +1,8 @@
 ---
 import ViewTransitions from "astro/components/ViewTransitions.astro";
 import Footer from "../components/Footer.astro";
+import { SideMenu } from "../components/SideMenu.jsx";
+
 interface Props {
   title: string;
 }
@@ -21,6 +23,7 @@ const { title } = Astro.props;
   </head>
   <body class="dark:bg-black">
     <div id="content">
+      <SideMenu transition:name="side-menu" transition:persist client:load />
       <slot />
       <Footer />
     </div>
