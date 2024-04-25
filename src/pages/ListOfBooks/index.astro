@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import BookCard from "../../components/ListOfBooks/BookCard.astro";
 ---
 
 <Layout title="My books">
@@ -14,4 +15,7 @@ import Layout from "../../layouts/Layout.astro";
       </h1>
     </a>
   </header>
+  <main class="m-auto max-w-4xl flex flex-col">
+    <BookCard />
+  </main>
 </Layout>
