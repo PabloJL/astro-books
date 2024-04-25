@@ -1,6 +1,9 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import BookCard from "../../components/ListOfBooks/BookCard.astro";
+import { books } from "../../data/books"
+
+
 ---
 
 <Layout title="My books">
@@ -11,11 +14,29 @@ import BookCard from "../../components/ListOfBooks/BookCard.astro";
         transition:name="title"
       >
         Latest
-        <span class="block text-[36px] md:text-[58px]">Books</span>
+        <span class="block text-[36px] md:text-[58px]">My Books</span>
       </h1>
     </a>
   </header>
   <main class="m-auto max-w-4xl flex flex-col">
-    <BookCard />
+    <ul class="flex flex-col gap-8 px-4" >
+      {
+        books.map((book) => {
+          return (
+            <li>
+              <BookCard 
+                transition:name={`book ${book.id} box`}}
+                id={book.id}
+                title={book.title}
+                img={book.img}
+                opinion={book.opinion}
+                pages={book.pages}
+              />
+            </li>
+          );
+        })
+      }
+    </ul>
+    
   </main>
 </Layout>
