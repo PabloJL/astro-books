@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import BookCard from "../../components/ListOfBooks/BookCard.astro";
+import {BookCard} from "../../components/ListOfBooks/BookCard.jsx"
 import { books } from "../../data/books"
 
 
@@ -26,6 +26,7 @@ import { books } from "../../data/books"
             <li>
               <BookCard 
                 transition:name={`book ${book.id} box`}}
+                client:load
                 id={book.id}
                 title={book.title}
                 img={book.img}
