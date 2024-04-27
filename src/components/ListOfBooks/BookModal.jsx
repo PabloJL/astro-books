@@ -1,4 +1,4 @@
-export default function BookModal({ title, img, handleClick }) {
+export default function BookModal({ title, img, author, pages, handleClick }) {
   return (
     <div
       id="crud-modal"
@@ -35,18 +35,42 @@ export default function BookModal({ title, img, handleClick }) {
               <span class="sr-only">Close modal</span>
             </button>
           </div>
-          <section className="flex flex-col md:flex-row md:h-full md:w-full md:gap-10 ">
-            <picture className="md:h-full md:w-1/2 p-4 h-1/2 w-1/2">
+          <section className="flex flex-col md:flex-row md:h-full md:w-full md:gap-10 items-center md:items-start ">
+            <picture className="h-full md:w-1/2 p-4  w-1/2">
               <img
                 src={img}
                 alt={`Cover of book ${title}`}
                 className="rounded-xl"
               />
             </picture>
-            <aside className="p-4">
-              <h1 className="dark:text-white md:w-1/2 text-2xl font-bold ">
-                {title}
-              </h1>
+            <aside className="p-4 flex flex-col gap-4 md:h-full justify-between">
+              <div className="flex flex-col gap-4">
+                <h1 className="dark:text-white text-2xl font-black">{title}</h1>
+                <p className="dark:text-white text-xl font-semibold">
+                  {author}
+                </p>
+                <p className="dark:text-white text-xl font-semibold">
+                  Started on: <span className="font-extrabold">26-04-24</span>{" "}
+                </p>
+                <p className="dark:text-white text-xl font-semibold">
+                  Ended on: <span className="font-extrabold">26-05-24</span>{" "}
+                </p>
+                <p className="dark:text-white text-xl font-semibold">
+                  <input
+                    type="number"
+                    max={30}
+                    className="w-1/4 dark:bg-zinc-800 rounded-lg text-center h-full"
+                  />
+                  /{pages} pages
+                </p>
+              </div>
+
+              <button
+                className="bg-blue-600 w-40 h-10 text-white rounded-lg self-end"
+                onClick={handleClick}
+              >
+                Save
+              </button>
             </aside>
           </section>
         </div>

@@ -48,7 +48,13 @@ export const BookCard = ({ id, title, img, author, pages }) => {
         </aside>
       </button>
       {openModal && (
-        <BookModal title={title} img={img} handleClick={handleClick} />
+        <BookModal
+          title={title}
+          img={img}
+          author={author}
+          pages={pages}
+          handleClick={handleClick}
+        />
       )}
     </div>
   );
