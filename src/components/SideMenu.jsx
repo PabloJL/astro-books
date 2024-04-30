@@ -45,9 +45,9 @@ export const SideMenu = () => {
       >
         <h5
           id="drawer-navigation-label"
-          className="text-base font-semibold text-gray-500 uppercase dark:text-gray-400"
+          className="text-base font-black text-gray-500 uppercase dark:text-white  "
         >
-          Menu
+          MENU
         </h5>
         <button
           type="button"
@@ -114,7 +114,7 @@ export const SideMenu = () => {
             </li>
             <li>
               <a
-                href="#"
+                href="/friends"
                 className="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
               >
                 <svg
