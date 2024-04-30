@@ -1,0 +1,22 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ListOfFriends from "../../components/ListOfFriends.astro";
+---
+
+<Layout title="Friends">
+  <main class="m-auto max-w-4xl flex flex-col items-center">
+    <header class="relative">
+      <a href="/">
+        <h1
+          class="scale-50 font-black uppercase text-6xl md:text-8xl text-center py-8 px-4 dark:text-white"
+          transition:name="title"
+        >
+          Latest
+          <span class="block text-[36px] md:text-[58px]">Friends</span>
+        </h1>
+      </a>
+    </header>
+
+    <ListOfFriends />
+  </main>
+</Layout>
