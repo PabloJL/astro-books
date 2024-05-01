@@ -6,24 +6,18 @@ import TabButton from "./TabButton";
 
 const TAB_DATA = [
   {
-    title: "Skills",
-    id: "Skills",
+    title: "Current",
+    id: "Current",
     content: <MyBooks />,
   },
   {
-    title: "Education",
-    id: "Education",
-    content: (
-      <ul className="  pl-2">
-        <li className=" list-disc">Bachelors in Computer Science at </li>
-        <li>Instituto Tecnologico de Saltillo</li>
-        <li>2017-2022</li>
-      </ul>
-    ),
+    title: "Books",
+    id: "Books",
+    content: <MyBooks />,
   },
   {
-    title: "Experience",
-    id: "Experience",
+    title: "Reviews",
+    id: "Reviews",
     content: (
       <ul className=" list-disc pl-2">
         <li>Lennox International</li>
@@ -35,7 +29,7 @@ const TAB_DATA = [
 ];
 
 function ContentSection() {
-  const [tab, setTab] = useState("Skills");
+  const [tab, setTab] = useState("Current");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -48,22 +42,22 @@ function ContentSection() {
     <section className=" text-white w-full h-full" id="about">
       <div className="flex mt-8 gap-3 justify-evenly ">
         <TabButton
-          selectTab={() => handleTabChange("Skills")}
-          active={tab === "Skills"}
+          selectTab={() => handleTabChange("Current")}
+          active={tab === "Current"}
         >
-          Skills
+          Current
         </TabButton>
         <TabButton
-          selectTab={() => handleTabChange("Education")}
-          active={tab === "Education"}
+          selectTab={() => handleTabChange("Books")}
+          active={tab === "Books"}
         >
-          Education
+          Books
         </TabButton>
         <TabButton
-          selectTab={() => handleTabChange("Experience")}
-          active={tab === "Experience"}
+          selectTab={() => handleTabChange("Reviews")}
+          active={tab === "Reviews"}
         >
-          Experience
+          Reviews
         </TabButton>
       </div>
       <div className="mt-8">{TAB_DATA.find((t) => t.id === tab).content}</div>
