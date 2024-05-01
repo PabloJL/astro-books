@@ -5,9 +5,9 @@ export default function Reviews() {
     return (
       <article className="md:gap-8 md:grid md:grid-cols-3 p-10">
         <div>
-          <div className="flex items-center mb-6 md:flex-col md:items-start md:gap-4">
+          <div className="flex  mb-6 flex-col  md:gap-4">
             <img
-              className="w-20 h-20 md:w-1/2 md:h-1/2 rounded-md hidden md:flex "
+              className="w-1/3 h-1/3 md:w-1/2 md:h-1/2 mb-8 md:mb-0 rounded-md place-self-center md:place-self-start "
               src={book.img}
               alt=""
             />

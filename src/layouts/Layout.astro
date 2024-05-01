@@ -23,7 +23,7 @@ const { title } = Astro.props;
   </head>
   <body class="dark:bg-black">
     <div id="content">
-      <SideMenu transition:name="side-menu" transition:persist client:load />
+      <SideMenu transition:name="side-menu" client:load />
       <slot />
       <Footer />
     </div>
