@@ -1,7 +1,7 @@
 "use client";
 import { useTransition, useState } from "react";
 import MyBooks from "../MyBooks";
-
+import Reviews from "./Reviews.jsx";
 import TabButton from "./TabButton";
 
 const TAB_DATA = [
@@ -18,13 +18,7 @@ const TAB_DATA = [
   {
     title: "Reviews",
     id: "Reviews",
-    content: (
-      <ul className=" list-disc pl-2">
-        <li>Lennox International</li>
-        <li>Hexaware Technologies</li>
-        <li>Eviden</li>
-      </ul>
-    ),
+    content: <Reviews />,
   },
 ];
 
