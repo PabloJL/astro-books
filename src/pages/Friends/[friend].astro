@@ -1,8 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import BookSection from "../../components/BookSection.astro";
-import CommentsSection from "../../components/Comments/CommentsSection.astro";
-import { slide } from "astro:transitions";
+import ProfileSection from "../../components/UserProfile/ProfileSection.astro";
+import ContentSection from "../../components/UserProfile/ContentSection.astro";
 import { friends } from "../../data/friends";
 const { friend } = Astro.params;
 
@@ -16,7 +15,7 @@ const { name, img } = info;
 
 <Layout title=`Libro ${name}`>
   <main class="m-auto max-w-4xl flex flex-col">
-    <h1>{name}</h1>
-    <img src={img} alt="" />
+    <ProfileSection name={name} img={img} />
+    <ContentSection />
   </main>
 </Layout>

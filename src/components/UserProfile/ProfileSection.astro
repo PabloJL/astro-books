@@ -1,0 +1,48 @@
+---
+import { slide } from "astro:transitions";
+export interface Props {
+  name: string;
+  img: string;
+}
+const { name, img } = Astro.props;
+---
+
+<header class="relative">
+  <a href="/">
+    <h1
+      class="scale-50 font-black uppercase text-6xl md:text-8xl text-center py-8 px-4 dark:text-white"
+      transition:name="title"
+    >
+      Latest
+      <span class="block text-[36px] md:text-[58px]">Books</span>
+    </h1>
+  </a>
+</header>
+
+<div
+  class="md:grid md:grid-cols-[350px_1fr] gap-x-12 mt-3 flex flex-col-reverse"
+>
+  <div class="flex flex-col">
+    <div class="flex justify-center mb-8">
+      <picture class="md:w-full relative place-self-center">
+        <img
+          transition:name={`user ${name} picture`}
+          transition:animate={slide({ duration: "0.2s" })}
+          class="object-cover max-w-full rounded-full h-3/4 w-3/4 mx-auto"
+          src={img}
+          alt={`Profile picture of ${name}`}
+        />
+      </picture>
+    </div>
+  </div>
+  <aside class="flex flex-col text-center md:text-left p-4 mb-10 md:mb-0">
+    <h1 class="md:text-5xl text-3xl font-black mb-4 dark:text-white">
+      {name}
+    </h1>
+    <p class="dark:text-white md:text-xl text-lg">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem soluta a
+      cupiditate quisquam praesentium natus labore ex. Iste accusantium impedit
+      amet totam natus. Magni perspiciatis ex, velit impedit aut vitae?
+    </p>
+  </aside>
+</div>
