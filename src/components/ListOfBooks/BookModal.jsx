@@ -44,18 +44,20 @@ export default function BookModal({ title, img, author, pages, handleClick }) {
               />
             </picture>
             <aside className="p-4 flex flex-col gap-4 md:h-full justify-between">
-              <div className="flex flex-col gap-4">
-                <h1 className="dark:text-white text-2xl font-black">{title}</h1>
-                <p className="dark:text-white text-xl font-semibold">
+              <div className="flex flex-col gap-1 md:gap-4">
+                <h1 className="dark:text-white text-xl md:text-2xl font-black">
+                  {title}
+                </h1>
+                <p className="dark:text-white text-base md:text-xl font-semibold">
                   {author}
                 </p>
-                <p className="dark:text-white text-xl font-semibold">
+                <p className="dark:text-white text-base md:text-xl font-semibold">
                   Started on: <span className="font-extrabold">26-04-24</span>{" "}
                 </p>
-                <p className="dark:text-white text-xl font-semibold">
+                <p className="dark:text-white  text-base md:text-xl font-semibold">
                   Ended on: <span className="font-extrabold">26-05-24</span>{" "}
                 </p>
-                <p className="dark:text-white text-xl font-semibold">
+                <p className="dark:text-white  text-base md:text-xl font-semibold">
                   <input
                     type="number"
                     max={30}
@@ -66,7 +68,7 @@ export default function BookModal({ title, img, author, pages, handleClick }) {
               </div>
 
               <button
-                className="bg-blue-600 w-40 h-10 text-white rounded-lg self-end"
+                className="bg-blue-600 md:w-40 md:h-10 w-1/2 h-1/2 text-white rounded-lg self-end"
                 onClick={handleClick}
               >
                 Save

@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import ProfileSection from "../../components/UserProfile/ProfileSection.astro";
-import ContentSection from "../../components/UserProfile/ContentSection.astro";
+import ContentSection from "../../components/UserProfile/ContentSection.jsx";
 import { friends } from "../../data/friends";
 const { friend } = Astro.params;
 
@@ -16,6 +16,6 @@ const { name, img } = info;
 <Layout title=`Libro ${name}`>
   <main class="m-auto max-w-4xl flex flex-col">
     <ProfileSection name={name} img={img} />
-    <ContentSection />
+    <ContentSection client:load />
   </main>
 </Layout>
