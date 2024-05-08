@@ -21,3 +21,24 @@ import { books } from "../data/books";
     })
   }
 </ul>
+<!-- ---
+import BookItem from "./BookItem.astro";
+// import { books } from "../data/books";
+import { getBooks } from "../services/books.js";
+
+const { books } = await getBooks();
+---
+
+<ul class="grid grid-cols-2 md:grid-cols-3 gap-3 px-4">
+  {
+    books.map((book) => (
+      <BookItem
+        transition:name={`book ${book.id} box`}
+        id={book.id}
+        title={book.volumeInfo.title}
+        img={book.imageLinks.thumbnail}
+      />
+    ))
+  }
+</ul> -->
+
