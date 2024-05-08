@@ -11,7 +11,7 @@ export const SideMenu = () => {
     <div className="">
       {/* Button positioned in the top left corner */}
       <button
-        className="text-white z-10  hover:bg-slate-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5  dark:hover:bg-slate-500 focus:outline-none"
+        className="text-white z-10  hover:bg-slate-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm   dark:hover:bg-slate-500 focus:outline-none"
         type="button"
         onClick={toggleDrawer}
         aria-expanded={drawerVisible}
