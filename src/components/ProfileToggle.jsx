@@ -11,7 +11,7 @@ export const ProfileToggle = () => {
     <div className="relative">
       <button
         type="button"
-        className="flex text-sm place-self-center bg-zinc-900 w-10 h-10 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+        className="flex text-sm place-self-center bg-zinc-900 w-14 h-14 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
         id="user-menu-button"
         aria-expanded={isMenuOpen ? "true" : "false"}
         data-dropdown-toggle="user-dropdown"
@@ -20,7 +20,7 @@ export const ProfileToggle = () => {
       >
         <span className="sr-only">Open user menu</span>
         <img
-          className="w-10 h-10 rounded-full"
+          className="w-14 h-14 rounded-full"
           src="https://flowbite.com/docs/images/people/profile-picture-3.jpg"
           alt="user photo"
         />
