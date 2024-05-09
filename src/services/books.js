@@ -1,6 +1,7 @@
 export const getBooks = async () => {
   const res = await fetch();
 
-  const books = await res.json();
+  const data = await res.json();
+  const books = data;
   return books;
 };
