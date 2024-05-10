@@ -37,7 +37,7 @@ export const ProfileToggle = () => {
             Bonnie Green
           </span>
           <span className="block text-sm text-gray-500 truncate dark:text-gray-400">
-            name@flowbite.com
+            name@example.com
           </span>
         </div>
         <ul className="py-2" aria-labelledby="user-menu-button">
