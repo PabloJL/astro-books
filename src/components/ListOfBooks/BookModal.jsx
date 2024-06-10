@@ -1,4 +1,4 @@
-import Calendar from "../Comments/Calendar";
+import Calendar from "../Calendar";
 export default function BookModal({ title, img, author, pages, handleClick }) {
   return (
     <div

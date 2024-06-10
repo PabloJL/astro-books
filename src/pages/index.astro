@@ -2,11 +2,13 @@
 import Layout from "../layouts/Layout.astro";
 import Title from "../components/Title.astro";
 import ListOfBooks from "../components/ListOfBooks.astro";
+import { DarkThemeToggle } from "flowbite-react";
 ---
 
 <Layout title="JP Books">
   <main class="m-auto max-w-4xl">
     <Title />
     <ListOfBooks />
+    <DarkThemeToggle client:load />
   </main>
 </Layout>
