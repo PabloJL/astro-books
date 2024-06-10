@@ -56,7 +56,10 @@ export default function BookModal({ title, img, author, pages, handleClick }) {
                   Started on: <Calendar />
                 </p>
                 <p className="dark:text-white  text-base md:text-xl font-semibold">
-                  Ended on: <span className="font-extrabold">26-05-24</span>{" "}
+                  Ended on: <Calendar />
+                </p>
+                <p className="dark:text-white  text-base md:text-xl font-semibold">
+                  Progress
                 </p>
                 <p className="dark:text-white  text-base md:text-xl font-semibold">
                   <input
