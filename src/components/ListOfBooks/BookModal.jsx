@@ -1,3 +1,4 @@
+import Calendar from "../Comments/Calendar";
 export default function BookModal({ title, img, author, pages, handleClick }) {
   return (
     <div
@@ -52,7 +53,7 @@ export default function BookModal({ title, img, author, pages, handleClick }) {
                   {author}
                 </p>
                 <p className="dark:text-white text-base md:text-xl font-semibold">
-                  Started on: <span className="font-extrabold">26-04-24</span>{" "}
+                  Started on: <Calendar />
                 </p>
                 <p className="dark:text-white  text-base md:text-xl font-semibold">
                   Ended on: <span className="font-extrabold">26-05-24</span>{" "}
