@@ -1,10 +1,11 @@
 import Calendar from "../Calendar";
+import { Modal } from "flowbite-react";
 export default function BookModal({ title, img, author, pages, handleClick }) {
   return (
     <div
       id="crud-modal"
       aria-hidden="true"
-      className="flex flex-col overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+      className="flex flex-col overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 md:h-[calc(100%-1rem)] max-h-full h-fit"
     >
       <div className="relative p-4  w-full h-3/4 flex justify-center">
         <div className="flex flex-col w-full h-full items-center bg-white border border-gray-200 rounded-lg shadow md:max-w-3xl  dark:border-zinc-800 dark:bg-zinc-900 ">
@@ -53,11 +54,13 @@ export default function BookModal({ title, img, author, pages, handleClick }) {
                   {author}
                 </p>
                 <p className="dark:text-white text-base md:text-xl font-semibold">
-                  Started on: <Calendar />
+                  Started on:
                 </p>
+                <Calendar />
                 <p className="dark:text-white  text-base md:text-xl font-semibold">
-                  Ended on: <Calendar />
+                  Ended on:
                 </p>
+                <Calendar />
                 <p className="dark:text-white  text-base md:text-xl font-semibold">
                   Progress
                 </p>
@@ -65,14 +68,15 @@ export default function BookModal({ title, img, author, pages, handleClick }) {
                   <input
                     type="number"
                     max={30}
-                    className="w-1/4 dark:bg-zinc-800 rounded-lg text-center h-full"
+                    className="w-1/4
+                     dark:bg-zinc-700 rounded-lg text-center h-full"
                   />
                   /{pages} pages
                 </p>
               </div>
 
               <button
-                className="bg-blue-600 md:w-40 md:h-10 w-1/2 h-1/2 text-white rounded-lg self-end"
+                className="bg-blue-600 md:w-40 md:h-10 w-full h-full text-white rounded-lg md:self-end"
                 onClick={handleClick}
               >
                 Save
