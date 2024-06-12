@@ -34,7 +34,7 @@ export const ProfileToggle = () => {
       >
         <div className="px-4 py-3">
           <a
-            href="/Profile"
+            href={`/Profile/${"Bonnie Green"}`}
             className="block text-sm text-gray-900 dark:text-white"
           >
             Bonnie Green
