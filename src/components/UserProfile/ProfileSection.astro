@@ -44,5 +44,21 @@ const { name, img } = Astro.props;
       cupiditate quisquam praesentium natus labore ex. Iste accusantium impedit
       amet totam natus. Magni perspiciatis ex, velit impedit aut vitae?
     </p>
+    <div>
+      <ul
+        class="dark:text-white flex flex-row gap-2 md:justify-start md:p-0 md:py-6 justify-center p-6 text-xl"
+      >
+        <li>
+          <a href={`/Profile/${name}/followers`}>
+            <span class="font-black">200</span> followers
+          </a>
+        </li>
+        <li>
+          <a href={`/Profile/${name}/following`}>
+            <span class="font-black">120</span> following
+          </a>
+        </li>
+      </ul>
+    </div>
   </aside>
 </div>
