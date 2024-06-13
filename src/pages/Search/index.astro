@@ -1,0 +1,10 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Search from "../../components/Search";
+---
+
+<Layout title="Search for mobile">
+  <div class="block md:hidden">
+    <Search client:load />
+  </div>
+</Layout>

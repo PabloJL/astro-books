@@ -1,7 +1,7 @@
 export default function Search() {
   return (
-    <div className="w-full h-full">
-      <div className="hidden md:block relative">
+    <div className="w-full h-full p-8 md:p-0">
+      <div className="block relative">
         <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
           <svg
             className="w-4 h-4 text-gray-500 dark:text-gray-400"
