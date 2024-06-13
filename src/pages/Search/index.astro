@@ -4,7 +4,18 @@ import Search from "../../components/Search";
 ---
 
 <Layout title="Search for mobile">
-  <div class="block md:hidden">
+  <main class="m-auto max-w-4xl flex flex-col items-center md:hidden">
+    <header class="relative">
+      <a href="/">
+        <h1
+          class="scale-75 font-black uppercase text-6xl md:text-8xl text-center px-4 dark:text-white"
+          transition:name="title"
+        >
+          Book
+          <span class="block text-[36px] md:text-[58px]">Search</span>
+        </h1>
+      </a>
+    </header>
     <Search client:load />
-  </div>
+  </main>
 </Layout>
