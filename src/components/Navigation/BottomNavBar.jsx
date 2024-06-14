@@ -44,7 +44,7 @@ export default function BottomNavBar() {
           </span>
         </a>
         <a
-          href="/ListOfBooks"
+          href="/Notifications"
           className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group"
         >
           <svg
