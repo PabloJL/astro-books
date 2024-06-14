@@ -1,0 +1,42 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import ListOfFriends from "../../../components/ListOfFriends.astro";
+---
+
+<Layout title="Followers">
+  <header class="relative">
+    <a
+      href="javascript:window.history.back()"
+      type="button"
+      class="fixed z-10 md:left-20 left-4 top-[35px] text-white bg-black hover:bg-blue-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-black dark:focus:ring-blue-800"
+    >
+      <svg
+        class="w-6 h-6 rotate-180"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 14 10"
+      >
+        <path
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+      </svg>
+      <span class="sr-only">Back</span>
+    </a>
+    <a href="/">
+      <h1
+        class="scale-50 font-black uppercase text-6xl md:text-8xl text-center pb-8 px-4 dark:text-white"
+        transition:name="title"
+      >
+        <span class="block text-[36px] md:text-[58px]">My</span>
+        Follows
+      </h1>
+    </a>
+  </header>
+  <main class="m-auto w-full flex flex-col items-center">
+    <ListOfFriends />
+  </main>
+</Layout>
