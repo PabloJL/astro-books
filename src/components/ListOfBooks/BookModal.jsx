@@ -5,9 +5,9 @@ export default function BookModal({ title, img, author, pages, handleClick }) {
     <div
       id="crud-modal"
       aria-hidden="true"
-      className="flex flex-col overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 md:h-[calc(100%-1rem)] max-h-full h-fit"
+      className="flex flex-col overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 md:h-[calc(100%-1rem)] max-h-full "
     >
-      <div className="relative p-4  w-full h-3/4 flex justify-center">
+      <div className="relative p-4  w-full h-auto flex justify-center">
         <div className="flex flex-col w-full h-full items-center bg-white border border-gray-200 rounded-lg shadow md:max-w-3xl  dark:border-zinc-800 dark:bg-zinc-900 ">
           <div class="flex items-center justify-between p-4 md:p-5 rounded-t w-full">
             <h3 class="text-2xl font-semibold text-gray-900 dark:text-white">
@@ -34,7 +34,6 @@ export default function BookModal({ title, img, author, pages, handleClick }) {
                   d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
                 />
               </svg>
-              <span class="sr-only">Close modal</span>
             </button>
           </div>
           <section className="flex flex-col md:flex-row md:h-full md:w-full md:gap-10 items-center md:items-start ">

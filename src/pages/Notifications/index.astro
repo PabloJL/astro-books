@@ -1,0 +1,41 @@
+---
+import Layout from "../..//layouts/Layout.astro";
+import NotificationCard from "../../components/Notifications/NotificationCard";
+
+const dummyNotis = [
+  {
+    title: "Noti 1",
+    text: "Example 1 of notis",
+  },
+  {
+    title: "Noti 2",
+    text: "Example 2 of notis",
+  },
+  {
+    title: "Noti 3",
+    text: "Example 3 of notis",
+  },
+];
+---
+
+<Layout title="Notifications">
+  <header class="relative">
+    <a href="/">
+      <h1
+        class="scale-50 font-black uppercase text-5xl md:text-8xl text-center pb-8 dark:text-white"
+        transition:name="title"
+      >
+        <span class="block text-[36px] md:text-[58px]">My</span>
+        Notifications
+      </h1>
+    </a>
+  </header>
+
+  <main class="m-auto w-full flex flex-col items-center gap-4">
+    {
+      dummyNotis.map((noti) => (
+        <NotificationCard client:load title={noti.title} text={noti.text} />
+      ))
+    }
+  </main>
+</Layout>
