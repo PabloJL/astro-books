@@ -14,7 +14,7 @@ const { name, img } = info;
 ---
 
 <Layout title=`Libro ${name}`>
-  <main class="m-auto max-w-4xl flex flex-col">
+  <main class="m-auto max-w-4xl flex flex-col mb-20">
     <ProfileSection name={name} img={img} />
     <ContentSection client:load />
   </main>

@@ -33,7 +33,7 @@ function ContentSection() {
   };
 
   return (
-    <section className=" text-white w-full h-full" id="about">
+    <section className="text-black dark:text-white w-full h-full" id="about">
       <div className="flex mt-8 gap-3 justify-evenly ">
         <TabButton
           selectTab={() => handleTabChange("Current")}
