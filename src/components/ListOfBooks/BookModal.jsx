@@ -52,15 +52,22 @@ export default function BookModal({ title, img, author, pages, handleClick }) {
                 <p className="dark:text-white text-base md:text-xl font-semibold">
                   {author}
                 </p>
-                <p className="dark:text-white text-base md:text-xl font-semibold">
-                  Started on:
-                </p>
-                <Calendar />
-                <p className="dark:text-white  text-base md:text-xl font-semibold">
-                  Ended on:
-                </p>
-                <Calendar />
-                <p className="dark:text-white  text-base md:text-xl font-semibold">
+                <section className="flex md:flex-col flex-row gap-2">
+                  <div>
+                    <p className="dark:text-white text-sm md:text-xl font-semibold">
+                      Started on:
+                    </p>
+                    <Calendar />
+                  </div>
+                  <div>
+                    <p className="dark:text-white  text-sm md:text-xl font-semibold">
+                      Ended on:
+                    </p>
+                    <Calendar />
+                  </div>
+                </section>
+
+                <p className="dark:text-white  text-sm md:text-xl font-semibold">
                   Progress
                 </p>
                 <p className="dark:text-white  text-base md:text-xl font-semibold">
@@ -75,7 +82,7 @@ export default function BookModal({ title, img, author, pages, handleClick }) {
               </div>
 
               <button
-                className="bg-blue-600 md:w-40 md:h-10 w-full h-full text-white rounded-lg md:self-end"
+                className="bg-blue-600 w-full h-10  text-white rounded-lg md:self-end"
                 onClick={handleClick}
               >
                 Save
