@@ -5,17 +5,23 @@ import LogInCard from "../components/LogInCard.astro";
 ---
 
 <Layout title="Sign-In">
-  <main class="w-full h-screen flex">
-    <section class="flex gap-2 w-full">
+  <main class="w-full h-full md:h-screen flex">
+    <section class="flex md:gap-2 w-full">
       <picture class="w-full h-full md:block hidden">
         <img
           class="w-full h-full rounded-lg object-cover"
-          src="https://discoveririshkidsbooks.ie/wp-content/uploads/2023/08/Irish-childrens-books-e1693410021475.jpeg"
+          src="https://images.squarespace-cdn.com/content/v1/570a40ee1d07c049723595d6/1633269061545-VJU2SQANYJXZNMKCWTG9/DSC01534.jpg"
           alt="picture of books"
         />
       </picture>
-      <div class="flex flex-col w-1/2 h-full items-center">
-        <Title />
+      <div class="flex flex-col md:w-1/2 h-full w-full p-8 md:p-0 items-center">
+        <h1
+          transition:name="title"
+          class="font-black uppercase text-6xl md:text-8xl text-center py-8 dark:text-white"
+        >
+          Latest
+          <span class="block text-[36px] md:text-[58px]">Books</span>
+        </h1>
         <LogInCard />
       </div>
     </section>
