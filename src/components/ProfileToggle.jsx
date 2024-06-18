@@ -29,19 +29,16 @@ export const ProfileToggle = () => {
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } z-50 absolute right-0 mt-2 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-zinc-900 dark:divide-gray-600`}
+        } z-50 w-40 absolute right-0 mt-2 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-zinc-900 dark:divide-gray-600`}
         id="user-dropdown"
       >
         <div className="px-4 py-3">
           <a
             href={`/Profile/${"Bonnie Green"}`}
-            className="block text-sm text-gray-900 dark:text-white"
+            className="block text-lg font-semibold text-gray-900 dark:text-white"
           >
             Bonnie Green
           </a>
-          <span className="block text-sm text-gray-500 truncate dark:text-gray-400">
-            name@example.com
-          </span>
         </div>
         <ul className="py-2" aria-labelledby="user-menu-button">
           <li>
