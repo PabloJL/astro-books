@@ -27,7 +27,7 @@ const { name, img } = Astro.props;
       <picture class="w-full relative place-self-center">
         <img
           transition:name={`user ${name} picture`}
-          transition:animate={slide({ duration: "0.2s" })}
+          transition:animate={slide({ duration: "0s" })}
           class="object-cover max-w-full rounded-full h-3/4 w-3/4 mx-auto"
           src={img}
           alt={`Profile picture of ${name}`}
