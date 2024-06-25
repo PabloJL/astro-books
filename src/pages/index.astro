@@ -7,8 +7,20 @@ import ListOfBooks from "../components/ListOfBooks.astro";
 <Layout title="JP Books">
   <main class="m-auto max-w-4xl mb-20 md:mb-0">
     <Title />
+    <section class="mb-20">
+      <h1
+        class="text-4xl dark:text-white text-black px-4 font-black uppercase mb-4 text-center lg:text-start"
+      >
+        Trending
+      </h1>
+      <ListOfBooks />
+    </section>
     <section>
-      <h1 class="text-2xl dark:text-white text-black px-4">Trending</h1>
+      <h1
+        class="text-4xl dark:text-white text-black px-4 font-black uppercase mb-4 text-center lg:text-start"
+      >
+        For you...
+      </h1>
       <ListOfBooks />
     </section>
   </main>
