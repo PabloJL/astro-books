@@ -3,44 +3,24 @@ import BookItem from "./BookItem.astro";
 import { books } from "../data/books";
 
 ---
-<section class="swiper">
-  <ul class="flex gap-4 px-4 swiper-wrapper  ">
-    {
-      books.map((book) => {
-        return (
-          <li class="swiper-slide">
-            <BookItem
-              transition:name={`book ${book.id} box`}}
-              id={book.id}
-              title={book.title}
-              img={book.img}
-            />
-          </li>
-        );
-      })
-    }
-  </ul>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-</section>
-<script>
-  import Swiper from 'swiper';
-  import 'swiper/css';
-  // Módulo Navigation de Swiper y estilos
-  import { Navigation } from "swiper/modules";
-  import "swiper/css/navigation";
-  const swiper = new Swiper(".swiper", {
-    modules: [Navigation], // definir los módulos a usar
-    loop: false,            // definir si los slides estarán en bucle
-    slidesPerView: 3,      // agregar número de slides para la pantalla
-    spaceBetween: 40,      // separación entre slides en px
-    navigation: {          // definir botones next y prev para el módulo Navigation
-      prevEl: ".swiper-button-prev",
-      nextEl: ".swiper-button-next",
-    }
-  });
-</script>
 
+<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
+  {
+    books.map((book) => {
+      return (
+        <li>
+          <BookItem
+            transition:name={`book ${book.id} box`}}
+            
+            id={book.id}
+            title={book.title}
+            img={book.img}
+          />
+        </li>
+      );
+    })
+  }
+</ul>
 <!-- ---
 import BookItem from "./BookItem.astro";
 // import { books } from "../data/books";
@@ -61,4 +41,3 @@ const { books } = await getBooks();
     ))
   }
 </ul> -->
-
