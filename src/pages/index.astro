@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Title from "../components/Title.astro";
 import ListOfBooks from "../components/ListOfBooks.astro";
+import BooksSlider from "../components/BooksSlider/BooksSlider";
 ---
 
 <Layout title="JP Books">
@@ -13,7 +14,7 @@ import ListOfBooks from "../components/ListOfBooks.astro";
       >
         Trending
       </h1>
-      <ListOfBooks />
+      <BooksSlider client:load />
     </section>
     <section>
       <h1
@@ -21,7 +22,7 @@ import ListOfBooks from "../components/ListOfBooks.astro";
       >
         For you...
       </h1>
-      <ListOfBooks />
+      <BooksSlider client:load />
     </section>
   </main>
 </Layout>
