@@ -1,17 +1,34 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-
+import { useRef } from "react";
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
 import { books } from "../../data/books";
 
 export default function BooksSlider() {
+  const swiperRef = useRef(null);
+
   return (
-    <div className=" px-4">
+    <div className="flex px-4 md:px-0">
+      <button
+        className="h-1/4 self-center text-white p-2 md:block hidden hover:bg-gray-300 hover:rounded-full dark:hover:bg-gray-800"
+        onClick={() => swiperRef.current?.slidePrev()}
+      >
+        <svg
+          class="w-10 h-10 text-gray-800 dark:text-white"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m15 19-7-7 7-7"
+          />
+        </svg>
+      </button>
       <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={10}
         slidesPerView={2}
         breakpoints={{
@@ -20,9 +37,9 @@ export default function BooksSlider() {
             spaceBetween: 30,
           },
         }}
-        navigation
-        pagination={{ clickable: true }}
-        // scrollbar={{ draggable: true }}
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper;
+        }}
       >
         {books.map(({ id, title, img }) => {
           return (
@@ -41,6 +58,27 @@ export default function BooksSlider() {
           );
         })}
       </Swiper>
+
+      <button
+        className="h-1/4 self-center text-white p-2 md:block hidden hover:bg-gray-300 hover:rounded-full dark:hover:bg-gray-800"
+        onClick={() => swiperRef.current?.slideNext()}
+      >
+        <svg
+          class="w-10 h-10 text-gray-800 dark:text-white rotate-180"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="m15 19-7-7 7-7"
+          />
+        </svg>
+      </button>
     </div>
   );
 }
