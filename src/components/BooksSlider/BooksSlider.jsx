@@ -22,7 +22,7 @@ export default function BooksSlider() {
         }}
         navigation
         pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
+        // scrollbar={{ draggable: true }}
       >
         {books.map(({ id, title, img }) => {
           return (
