@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Tabs from "../components/SettingsPage/tabs.astro";
 ---
 
 <Layout title="settings">
@@ -10,7 +11,10 @@ import Layout from "../layouts/Layout.astro";
     >
       Settings
     </h1>
-    <section class="p-5">
+    <section>
+      <Tabs />
+    </section>
+    <!-- <section class="p-5">
       <div
         class="h-full w-[80%] m-auto md:w-full bg-zinc-50 dark:bg-zinc-900 rounded-2xl p-8 text-black dark:text-white font-medium text-base md:text-lg flex flex-col"
       >
@@ -36,6 +40,6 @@ import Layout from "../layouts/Layout.astro";
         >
         <a href="#" class="py-6">Help Center</a>
       </div>
-    </section>
+    </section> -->
   </main>
 </Layout>
