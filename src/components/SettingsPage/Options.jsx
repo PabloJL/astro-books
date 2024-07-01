@@ -1,22 +1,32 @@
 import { useTransition, useState } from "react";
 import ProfileSettings from "./ProfileSettings.jsx";
-import TabButton from "../UserProfile/TabButton.jsx";
+import SettingsButton from "./SettingsButton.jsx";
 
 const TAB_DATA = [
   {
-    title: "Settings",
-    id: "Settings",
+    title: "Account",
+    id: "Account",
     content: <ProfileSettings />,
   },
-  //   {
-  //     title: "Settings",
-  //     id: "Settings",
-  //     content: <ProfileSettings />,
-  //   },
+  {
+    title: "Preferences",
+    id: "Preferences",
+    content: <ProfileSettings />,
+  },
+  {
+    title: "Privacy",
+    id: "Privacy",
+    content: <ProfileSettings />,
+  },
+  {
+    title: "Help-Center",
+    id: "Help-Center",
+    content: <ProfileSettings />,
+  },
 ];
 
 function Options() {
-  const [tab, setTab] = useState("Current");
+  const [tab, setTab] = useState("Account");
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
@@ -27,22 +37,34 @@ function Options() {
 
   return (
     <section
-      className="text-black dark:text-white w-full h-full flex"
+      className="text-black dark:text-white w-full h-full flex flex-col md:flex-row"
       id="about"
     >
-      <div className="flex flex-col mt-8 gap-3 p-5">
-        <TabButton
-          selectTab={() => handleTabChange("Settings")}
-          active={tab === "Settings"}
+      <div className="flex flex-row md:flex-col  gap-3  justify-evenly md:p-5">
+        <SettingsButton
+          selectTab={() => handleTabChange("Account")}
+          active={tab === "Account"}
         >
-          Settings
-        </TabButton>
-        <TabButton
-          selectTab={() => handleTabChange("Settings")}
-          active={tab === "Settings"}
+          Account
+        </SettingsButton>
+        <SettingsButton
+          selectTab={() => handleTabChange("Preferences")}
+          active={tab === "Preferences"}
         >
-          Settings
-        </TabButton>
+          Preferences
+        </SettingsButton>
+        <SettingsButton
+          selectTab={() => handleTabChange("Privacy")}
+          active={tab === "Privacy"}
+        >
+          Privacy
+        </SettingsButton>
+        <SettingsButton
+          selectTab={() => handleTabChange("Help-Center")}
+          active={tab === "Help-Center"}
+        >
+          Help
+        </SettingsButton>
       </div>
       <div className="mt-8 w-full">
         {TAB_DATA.find((t) => t.id === tab)?.content}
