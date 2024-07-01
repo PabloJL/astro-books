@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Tabs from "../components/SettingsPage/tabs.astro";
+import Options from "../components/SettingsPage/Options.jsx";
 ---
 
 <Layout title="settings">
@@ -11,8 +12,8 @@ import Tabs from "../components/SettingsPage/tabs.astro";
     >
       Settings
     </h1>
-    <section>
-      <Tabs />
+    <section class="p-5">
+      <Options client:load />
     </section>
     <!-- <section class="p-5">
       <div
