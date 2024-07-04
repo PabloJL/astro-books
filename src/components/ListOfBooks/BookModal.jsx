@@ -76,7 +76,7 @@ export default function BookModal({ title, img, author, pages, handleClick }) {
                     max={30}
                     className="w-1/4
                      dark:bg-zinc-700 rounded-lg text-center h-full"
-                  />
+                  />{" "}
                   /{pages} pages
                 </p>
               </div>
