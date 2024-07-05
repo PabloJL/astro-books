@@ -61,7 +61,7 @@ export default function BookModal({ title, img, author, pages, handleClick }) {
                   </div>
                   <div>
                     <p className="dark:text-white  text-sm md:text-xl font-semibold mb-2">
-                      Ended on
+                      Ended on:
                     </p>
                     <Calendar />
                   </div>
