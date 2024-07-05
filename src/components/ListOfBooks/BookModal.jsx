@@ -54,14 +54,14 @@ export default function BookModal({ title, img, author, pages, handleClick }) {
                 </p>
                 <section className="flex md:flex-col flex-row gap-2">
                   <div>
-                    <p className="dark:text-white text-sm md:text-xl font-semibold">
+                    <p className="dark:text-white text-sm md:text-xl font-semibold mb-2">
                       Started on:
                     </p>
                     <Calendar />
                   </div>
                   <div>
-                    <p className="dark:text-white  text-sm md:text-xl font-semibold">
-                      Ended on:
+                    <p className="dark:text-white  text-sm md:text-xl font-semibold mb-2">
+                      Ended on
                     </p>
                     <Calendar />
                   </div>
