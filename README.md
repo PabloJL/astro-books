@@ -5,4 +5,4 @@
 -Add database to manage users book progresses, comments, reviews, etc.
 -Refactor code.
 -Test.
--Release bd.
+-Release basic version to prod.
