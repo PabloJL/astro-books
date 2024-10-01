@@ -43,21 +43,23 @@ export default function Search() {
       </div>
 
       {/* Display books */}
-      <div className="text-white w-full grid-cols-2">
+      <ul className="text-white grid grid-cols-2 my-10 ">
         {fetchedBooks.map((book) => (
-          <div key={book.id} className="text-white w-1/2">
-            <h1>{book.volumeInfo?.title || "No title available"}</h1>
-            <p>
-              {book.volumeInfo?.authors?.join(", ") || "No authors available"}
-            </p>
-            <p>{book.volumeInfo?.publisher}</p>
+          <li
+            key={book.id}
+            className="text-white w-full  text-center justify-items-center p-4"
+          >
             <img
               src={book.volumeInfo?.imageLinks?.thumbnail}
               alt={book.volumeInfo?.title}
+              className=" rounded-md object-cover  "
             />
-          </div>
+            <h1 className=" font-black text-base mt-4">
+              {book.volumeInfo?.title || "No title available"}
+            </h1>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 }
