@@ -10,7 +10,7 @@ export const getBooks = async () => {
 
 export const searchBooks = async (query) => {
   const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}`;
-  console.log(apiKey);
+
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -18,10 +18,10 @@ export const searchBooks = async (query) => {
     }
     const data = await response.json();
     console.log("Books Data:", data);
-    return data;
+    return data.items;
   } catch (error) {
     console.error("Error:", error);
   }
-  const books = data;
+  const books = data.items;
   return books;
 };
