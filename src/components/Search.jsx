@@ -8,7 +8,6 @@ export default function Search() {
   const handleSearch = async (e) => {
     e.preventDefault();
     const books = await searchBooks(search);
-    console.log("Fetched Books:", books);
     setFetchedBooks(books); // If the response contains items
   };
 
@@ -45,7 +44,6 @@ export default function Search() {
 
       {/* Display books */}
       <div className="text-white w-full">
-        {console.log(fetchedBooks)}
         {fetchedBooks.map((book) => (
           <div key={book.id} className="text-white">
             <h1>{book.volumeInfo?.title || "No title available"}</h1>
