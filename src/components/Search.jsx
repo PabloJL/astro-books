@@ -43,9 +43,9 @@ export default function Search() {
       </div>
 
       {/* Display books */}
-      <div className="text-white w-full">
+      <div className="text-white w-full grid-cols-2">
         {fetchedBooks.map((book) => (
-          <div key={book.id} className="text-white">
+          <div key={book.id} className="text-white w-1/2">
             <h1>{book.volumeInfo?.title || "No title available"}</h1>
             <p>
               {book.volumeInfo?.authors?.join(", ") || "No authors available"}
