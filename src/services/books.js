@@ -1,3 +1,5 @@
+const apiKey = import.meta.env.PUBLIC_API_KEY;
+
 export const getBooks = async () => {
   const res = await fetch();
 
@@ -7,9 +9,8 @@ export const getBooks = async () => {
 };
 
 export const searchBooks = async (query) => {
-  const apiKey = "AIzaSyAgNUguzdGrqdqyZ3yvYW6QvGklSk-4kww";
   const url = `https://www.googleapis.com/books/v1/volumes?q=${query}&key=${apiKey}`;
-
+  console.log(apiKey);
   try {
     const response = await fetch(url);
     if (!response.ok) {
