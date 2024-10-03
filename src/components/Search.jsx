@@ -43,7 +43,7 @@ export default function Search() {
       </div>
 
       {/* Display books */}
-      <ul className="text-white grid grid-cols-2 my-10 ">
+      <ul className="text-white grid md:grid-cols-4 grid-cols-2 my-10 ">
         {fetchedBooks.map((book) => (
           <li
             key={book.id}
