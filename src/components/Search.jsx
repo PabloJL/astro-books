@@ -31,12 +31,12 @@ export default function Search() {
             />
           </svg>
         </div>
-        <form onSubmit={handleSearch}>
+        <form onSubmit={handleSearch} className="justify-items-end">
           <input
             id="default-search"
             onChange={(e) => setSearch(e.target.value)}
             value={search}
-            className="block w-full h-full p-4 ps-10 text-lg text-gray-900 border border-gray-300 rounded-xl bg-zinc-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-zinc-900 dark:border-zinc-900 dark:placeholder-zinc-400 dark:text-white dark:focus:ring-zinc-500 dark:focus:border-zinc-500"
+            className="block w-full h-full  p-4 ps-10 text-lg text-gray-900 border border-gray-300 rounded-xl bg-zinc-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-zinc-900 dark:border-zinc-900 dark:placeholder-zinc-400 dark:text-white dark:focus:ring-zinc-500 dark:focus:border-zinc-500"
             placeholder="Search books..."
           />
         </form>
