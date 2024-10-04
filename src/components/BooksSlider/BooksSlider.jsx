@@ -45,11 +45,11 @@ export default function BooksSlider() {
           return (
             <SwiperSlide key={id}>
               <a
-                class="hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl"
+                className="hover:scale-105 inline-block transition-all hover:contrast-125 hover:shadow-2xl"
                 href={`/${title}`}
               >
                 <img
-                  class="aspect-[389/500] h-full object-cover w-full max-w-full rounded-lg"
+                  className="aspect-[389/500] h-full object-cover w-full max-w-full rounded-lg"
                   src={img}
                   alt={`Portada del Libro ${title}`}
                 />
@@ -64,7 +64,7 @@ export default function BooksSlider() {
         onClick={() => swiperRef.current?.slideNext()}
       >
         <svg
-          class="w-10 h-10 text-gray-800 dark:text-white rotate-180"
+          className="w-10 h-10 text-gray-800 dark:text-white rotate-180"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
