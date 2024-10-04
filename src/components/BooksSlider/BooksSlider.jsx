@@ -13,7 +13,7 @@ export default function BooksSlider() {
         onClick={() => swiperRef.current?.slidePrev()}
       >
         <svg
-          class="w-10 h-10 text-gray-800 dark:text-white"
+          className="w-10 h-10 text-gray-800 dark:text-white"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
