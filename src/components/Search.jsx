@@ -43,18 +43,18 @@ export default function Search() {
       </div>
 
       {/* Display books */}
-      <ul className="text-white grid md:grid-cols-4 grid-cols-2 my-10 ">
+      <ul className="dark:text-white text-black grid md:grid-cols-4 grid-cols-2 my-10 ">
         {fetchedBooks.map((book) => (
           <li
             key={book.id}
-            className="text-white w-full h-full text-center justify-items-center p-4 md:p-8 hover:scale-125"
+            className=" w-full h-full text-center justify-items-center p-4 md:p-8 hover:scale-125"
           >
             <img
               src={book.volumeInfo?.imageLinks?.thumbnail}
               alt={book.volumeInfo?.title}
               className=" rounded-md object-cover md:scale-110"
             />
-            <h1 className=" font-black text-base md:text-lg mt-4">
+            <h1 className=" font-bold text-base md:text-lg mt-4">
               {book.volumeInfo?.title || "No title available"}
             </h1>
           </li>
