@@ -5,7 +5,14 @@ import Title from "../components/Title.astro";
 
 <Layout title="About">
   <main class="m-auto max-w-4xl mb-20 md:mb-0">
-    <Title />
+    <a href="/">
+      <h1
+        transition:name="title"
+        class="font-black uppercase text-6xl md:text-8xl text-center py-8 dark:text-white"
+      >
+        About
+      </h1>
+    </a>
     <p
       class="dark:text-white dark:font-light text-xl md:text-2xl w-full font-normal text-black mb-20 p-8"
     >
