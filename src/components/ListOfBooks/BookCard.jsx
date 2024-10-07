@@ -35,13 +35,13 @@ export const BookCard = ({ id, title, img, author, pages }) => {
           </div>
 
           <div className="flex justify-end mb-1">
-            <span className="text-sm font-medium text-blue-700 dark:text-white">
+            <span className="text-sm font-medium text-blue-600 dark:text-white">
               95%
             </span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
             <div
-              className="bg-green-600 h-1.5 rounded-full"
+              className="dark:bg-green-600 bg-green-400 h-1.5 rounded-full"
               style={{ width: "95%" }}
             ></div>
           </div>
