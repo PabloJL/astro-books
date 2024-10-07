@@ -8,7 +8,7 @@ export const BookCard = ({ id, title, img, author, pages }) => {
   };
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center h-full">
       <button
         onClick={handleClick}
         className="flex flex-col w-full items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-zinc-700"
