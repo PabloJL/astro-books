@@ -17,7 +17,6 @@ export const searchBooks = async (query) => {
       throw new Error("Error fetching books data");
     }
     const data = await response.json();
-    console.log("Books Data:", data);
     return data.items;
   } catch (error) {
     console.error("Error:", error);
