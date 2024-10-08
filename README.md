@@ -5,5 +5,6 @@
 -Add auth to the app so people can log in and have a session.
 -Add database to manage users book progresses, comments, reviews, etc.
 -Refactor code.
+-Style tweaks.
 -Test.
 -Release basic version to prod.
