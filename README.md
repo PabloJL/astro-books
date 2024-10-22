@@ -6,4 +6,4 @@
 -Add database to manage users book progresses, comments, reviews, etc.
 -Refactor code.
 -Style tweaks.
--Test.
+-Test
