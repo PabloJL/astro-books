@@ -7,4 +7,4 @@
 -Refactor code.
 -Style tweaks.
 -Test.
--Release basic version t
+-Release basic version to prod.
